@@ -1,0 +1,75 @@
+﻿@model U2_W5_D4_BACK.Models.Scarpe
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Scarpe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeProdotto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeProdotto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImmagineCover)
+        </dt>
+
+        <dd>
+            <img src="~/Content/FileUpload/@Model.ImmagineCover" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImmagineDescrizione1)
+        </dt>
+
+        <dd>
+            <img src="~/Content/FileUpload/@Model.ImmagineDescrizione1" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImmagineDescrizione2)
+        </dt>
+
+        <dd>
+            <img src="~/Content/FileUpload/@Model.ImmagineDescrizione2" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descrizione)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descrizione)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrezzoProdotto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrezzoProdotto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdottoAttivo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdottoAttivo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

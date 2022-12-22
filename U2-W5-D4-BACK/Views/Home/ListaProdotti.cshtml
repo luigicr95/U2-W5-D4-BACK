@@ -1,0 +1,74 @@
+﻿@model IEnumerable<U2_W5_D4_BACK.Models.Scarpe>
+
+@{
+    ViewBag.Title = "ListaProdotti";
+}
+
+<h2>ListaProdotti</h2>
+
+<p>
+    @Html.ActionLink("Aggiungi Prodotto", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDProdotto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeProdotto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImmagineCover)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImmagineDescrizione1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImmagineDescrizione2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descrizione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrezzoProdotto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdottoAttivo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDProdotto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeProdotto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImmagineCover)            
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImmagineDescrizione1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImmagineDescrizione2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descrizione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrezzoProdotto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdottoAttivo)
+        </td>
+        <td>
+            @Html.ActionLink("Modifica", "Edit", new { id = item.IDProdotto }) |
+            @Html.ActionLink("Elimina", "Delete", new { id = item.IDProdotto })
+        </td>
+    </tr>
+}
+
+</table>

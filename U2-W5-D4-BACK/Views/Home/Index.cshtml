@@ -1,0 +1,20 @@
+﻿@model IEnumerable<U2_W5_D4_BACK.Models.Scarpe>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach ( var item in Model)
+{
+    <div class="card" style="width: 18rem;">
+        <img src="~/Content/FileUpload/@item.ImmagineCover" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@item.NomeProdotto</h5>
+            <p class="card-text">@item.PrezzoProdotto</p>
+            @Html.ActionLink("Dettagli", "Details", new { id = @item.IDProdotto })
+        </div>
+    </div>
+
+}

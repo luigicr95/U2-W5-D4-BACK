@@ -1,0 +1,23 @@
+﻿@model U2_W5_D4_BACK.Models.Scarpe
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>@Model.NomeProdotto, Prezzo: @Model.PrezzoProdotto</h4>
+    <hr />
+
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "ListaProdotti")
+        </div>
+    }
+</div>
